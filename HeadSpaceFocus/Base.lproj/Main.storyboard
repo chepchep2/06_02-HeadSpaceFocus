@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="07K-eu-e7f">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Focus View Controller-->
+        <scene sceneID="I8F-xe-kcA">
+            <objects>
+                <viewController storyboardIdentifier="FocusViewController" id="07K-eu-e7f" customClass="FocusViewController" customModule="HeadSpaceFocus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ndd-tE-Rzx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8IQ-Kb-vd6">
+                                <rect key="frame" x="0.0" y="48" width="414" height="848"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q2T-Fg-fh2">
+                                    <size key="itemSize" width="412" height="139"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FocusCell" id="Vn1-jD-JTp" customClass="FocusCell" customModule="HeadSpaceFocus" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="0.0" width="412" height="139"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9d3-au-h2o">
+                                            <rect key="frame" x="0.0" y="0.0" width="412" height="139"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quick Focus Rests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUe-VG-JRc">
+                                                    <rect key="frame" x="20" y="30" width="142.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Find and keep focus with music from world-renowend artists." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2D-Ju-Ydb">
+                                                    <rect key="frame" x="20" y="61.5" width="193.5" height="61"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MfK-Jc-ODA">
+                                                    <rect key="frame" x="262" y="-1" width="150" height="140.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="BHh-C0-Lrv"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="cloud.heavyrain.fill" catalog="system" renderingMode="original"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SUe-VG-JRc" firstAttribute="leading" secondItem="9d3-au-h2o" secondAttribute="leading" constant="20" id="0gz-rI-Rlr"/>
+                                                <constraint firstAttribute="bottom" secondItem="MfK-Jc-ODA" secondAttribute="bottom" id="0xo-ie-Sho"/>
+                                                <constraint firstItem="U2D-Ju-Ydb" firstAttribute="top" secondItem="SUe-VG-JRc" secondAttribute="bottom" constant="12" id="Fd0-mE-ozs"/>
+                                                <constraint firstItem="MfK-Jc-ODA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SUe-VG-JRc" secondAttribute="trailing" constant="30" id="Td3-0P-ySn"/>
+                                                <constraint firstItem="U2D-Ju-Ydb" firstAttribute="leading" secondItem="9d3-au-h2o" secondAttribute="leading" constant="20" id="Vt2-KT-wUf"/>
+                                                <constraint firstAttribute="trailing" secondItem="MfK-Jc-ODA" secondAttribute="trailing" id="W0e-bl-26k"/>
+                                                <constraint firstItem="MfK-Jc-ODA" firstAttribute="top" secondItem="9d3-au-h2o" secondAttribute="top" id="W2y-Ez-McV"/>
+                                                <constraint firstItem="SUe-VG-JRc" firstAttribute="top" secondItem="9d3-au-h2o" secondAttribute="top" constant="30" id="YNA-2l-bX2"/>
+                                                <constraint firstItem="MfK-Jc-ODA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="U2D-Ju-Ydb" secondAttribute="trailing" constant="30" id="aqU-We-lbK"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="U2D-Ju-Ydb" secondAttribute="bottom" constant="30" id="qRv-Fz-fbo"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="412" height="139"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="U2D-Ju-Ydb" id="DUt-kx-23V"/>
+                                            <outlet property="thumbnailImageView" destination="MfK-Jc-ODA" id="Rgv-yb-jb0"/>
+                                            <outlet property="titleLabel" destination="SUe-VG-JRc" id="nvu-RO-VNm"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEf-La-S0R">
+                                <rect key="frame" x="50" y="802" width="314" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qKO-2y-ffc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="See All">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshButtonTapped:" destination="07K-eu-e7f" eventType="touchUpInside" id="hT6-DV-tmb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xIF-vf-ToX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8IQ-Kb-vd6" firstAttribute="bottom" secondItem="Ndd-tE-Rzx" secondAttribute="bottom" id="5PM-cN-5zs"/>
+                            <constraint firstItem="HEf-La-S0R" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" constant="50" id="E0o-rx-ctr"/>
+                            <constraint firstItem="8IQ-Kb-vd6" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" id="EEO-rj-ipW"/>
+                            <constraint firstItem="HEf-La-S0R" firstAttribute="centerX" secondItem="xIF-vf-ToX" secondAttribute="centerX" id="NMf-7B-3gs"/>
+                            <constraint firstItem="xIF-vf-ToX" firstAttribute="trailing" secondItem="8IQ-Kb-vd6" secondAttribute="trailing" id="ODV-c6-hiD"/>
+                            <constraint firstItem="xIF-vf-ToX" firstAttribute="bottom" secondItem="HEf-La-S0R" secondAttribute="bottom" id="TLY-Nw-soY"/>
+                            <constraint firstItem="8IQ-Kb-vd6" firstAttribute="top" secondItem="xIF-vf-ToX" secondAttribute="top" id="udc-bB-0RS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="8IQ-Kb-vd6" id="4Bm-LN-YFy"/>
+                        <outlet property="refreshButton" destination="HEf-La-S0R" id="TcW-Tz-PZz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqZ-hT-Jgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75.362318840579718" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud.heavyrain.fill" catalog="system" width="126" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
